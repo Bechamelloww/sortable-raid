@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "roboto";
+    src: url("/ressources/RobotoMono-Light.ttf");
+}
+
+body {
+    color: #fff;
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    display: flex;
+    flex-direction: column;
+    font-family: 'roboto';
+}
+
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(50, 236, 81);
+  }
+
+  ::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #242424;
+    background-color: #000000;
+	border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #21ca5c;
+	border-radius: 1px;
+}
+
+header {
+    width: auto;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+img {
+    width: 100%;
+}
+
+header input {
+    border-radius: 5px;
+    border-color: #000000;
+    font-family: 'roboto';
+}
+
+h1 {
+    text-align: center;
+    color:rgb(36, 171, 58);
+}
+
+h2 {
+    text-align: center;
+    color:rgb(36, 171, 58);
+    font-size: small;
+}
+
+select {
+    font-family: 'roboto';
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 9px;
+    background-color:#464646;
+    border-color: #1b1b1b;
+    color: #fff;
+    border-width: 2px;
+    transition: 0.2s;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+td {
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+tr:hover {
+    transition: 0.2s;
+    background-color: #2c2c2c;
+}
+
+th {
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    color:rgb(50, 236, 81);
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #737373 0, #151515 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.button-29:focus {
+  box-shadow: #000000 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #000000 0 -3px 0 inset;
+}
+
+.button-29:active {
+  box-shadow: #000000 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+
+.pagination-number,
+.pagination-button {
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    margin: 0.25rem 0.25rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: .2rem;
+}
+
+.pagination-number:hover,
+.pagination-button:not(.disabled):hover {
+    background: #fff;
+}
+
+.pagination-number.active {
+    color: #fff;
+    background: #0085b6;
+}
+
+.detailDiv {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background-color: #0085b6;
+    border-radius: 15px;
+}
+.test {
+    display: flex;
+    /* justify-content: space-around; */
+    position: fixed;
+    margin-left: 25vw;
+    margin-top: 25vh;
+}

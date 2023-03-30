@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+		<h1>SORTABLE</h1>
+		<h2>ALVES Léo & MARIE Gabriel</h2>
+
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for heroes.." title="Type in a name">
+		<button id="prevButton" class="button-29" role="button">Previous</button>
+		<button id="nextButton" class="button-29" role="button">Next</button>
+		<br>
+
+		<label for="hero-select">Amount of heroes to be displayed :</label>
+		<select name="Hero" id="hero-select" method="post">
+			<option value="20">--Please choose an option--</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="563">All Heroes</option>
+		</select>
+	</header>
+
+	<table id="myTable">
+		<thead>
+			<tr>
+				<th data-sort="id">Icon</th>
+				<th data-sort="name">Name</th>
+				<th data-sort="fullName">Full Name</th>
+				<th data-sort="powerstat">Powerstats</th>
+				<th data-sort="race">Race</th>
+				<th data-sort="gender">Gender</th>
+				<th data-sort="height">Height</th>
+				<th data-sort="weight">Weight</th>
+				<th data-sort="birthplace">Place Of Birth</th>
+				<th data-sort="alignment">Alignement</th>
+			</tr>
+		</thead>
+		<tbody id="table_body"></tbody>
+	</table>
+</body>
+
+<script type="module" src="sortable.js"></script>
+<script>
+	function myFunction() {
+		// Declare variables
+		let input, filter, table, tr, td, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+
+		// Loop through all table rows, and hide those who don't match the search query
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[1];
+			if (td) {
+				txtValue = td.textContent || td.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				} else {
+					tr[i].style.display = "none";
+				}
+			}
+		}
+	}
+</script>
+<script>
+	function showDetails() {
+		// alert("hello");
+	}
+</script>
+
+</html>
